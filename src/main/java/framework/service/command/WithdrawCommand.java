@@ -14,7 +14,6 @@ public class WithdrawCommand implements Command {
         this.amount = amount;
     }
 
-    @Override
     public void execute() {
         accountService.withdraw(accountNumber, amount);
     }

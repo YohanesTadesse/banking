@@ -17,7 +17,6 @@ public class CreditCardReport implements Report {
         this.to = to;
     }
 
-    @Override
     public String generateReport() {
         StringBuilder report = new StringBuilder();
 

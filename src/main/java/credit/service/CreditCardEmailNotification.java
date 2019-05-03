@@ -6,7 +6,7 @@ import framework.service.notification.EmailNotification;
 import framework.service.notification.Observable;
 
 public class CreditCardEmailNotification extends EmailNotification {
-    @Override
+
     public void update(Observable observable, Object arg) {
         Account account = (Account) observable;
         Double amount = (Double) arg;

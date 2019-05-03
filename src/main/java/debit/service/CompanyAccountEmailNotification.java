@@ -9,7 +9,6 @@ import framework.service.notification.Observable;
 
 public class CompanyAccountEmailNotification extends EmailNotification {
 
-    @Override
     public void update(Observable observable, Object arg) {
         Account account = (Account)observable;
         Double amount = (Double)arg;
@@ -20,7 +19,7 @@ public class CompanyAccountEmailNotification extends EmailNotification {
         StringBuilder message = new StringBuilder();
         if(amount == null) {
             message.append("You don't have sufficient balance to make the withdraw");
-        }else {
+        }   else {
             Transaction lastTransaction = account.getAllTransactions().get(account.getAllTransactions().size() - 1);
             message.append("Account number: " + account.getAccountNumber());
             message.append(" " + lastTransaction.getDescription());

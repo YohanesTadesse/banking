@@ -10,7 +10,6 @@ public class InterestCommand implements Command {
         this.accountService = accountService;
     }
 
-    @Override
     public void execute() {
         accountService.addInterest();
     }

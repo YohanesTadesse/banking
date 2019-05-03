@@ -29,14 +29,14 @@ public abstract class CreditCardAccount extends Account {
     }
 
     @Override
-    public void withdraw(Double amount) throws LimitExceededException{
+    public void withdraw(Double amount) throws LimitExceededException {
         if((balance - amount) >= limit) {
             balance -= amount;
 
             String description = "withdrawn";
             Transaction transaction = new Transaction(amount, new Date(), description);
             addTransaction(transaction);
-        }else {
+        } else {
             throw new LimitExceededException("Credit account exceeded the limit");
         }
     }

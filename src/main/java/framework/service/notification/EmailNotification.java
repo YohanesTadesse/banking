@@ -1,7 +1,7 @@
 package framework.service.notification;
 
 
-public abstract class EmailNotification extends Notification{
+public abstract class EmailNotification extends Notification {
 
     public EmailNotification() {
         super("This is an Email notification object");
